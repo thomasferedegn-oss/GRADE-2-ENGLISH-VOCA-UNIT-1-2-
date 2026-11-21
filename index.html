@@ -1,0 +1,1989 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade 2 English Assessment — Unit 1 &amp; Unit 2 (62 Items)</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter for English & Noto Sans Ethiopic for crisp Amharic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans Ethiopic', 'system-ui', 'sans-serif'],
+                        amharic: ['Noto Sans Ethiopic', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Smooth transitions and voice-active pulse indicator */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in {
+            animation: fadeIn 0.3s ease-out forwards;
+        }
+        @keyframes pulseRing {
+            0% { transform: scale(0.96); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0.55); }
+            70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(13, 148, 136, 0); }
+            100% { transform: scale(0.96); box-shadow: 0 0 0 0 rgba(13, 148, 136, 0); }
+        }
+        .speaking-pulse {
+            animation: pulseRing 1.5s infinite;
+        }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white !important; }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased selection:bg-teal-100 selection:text-teal-900">
+
+    <!-- ==================== TOP NAVIGATION BAR ==================== -->
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm no-print">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-2">
+            <!-- Brand Title -->
+            <div class="flex items-center gap-2.5 min-w-0">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-teal-600 to-indigo-600 text-white flex items-center justify-center font-extrabold text-lg shadow-md shrink-0">
+                    G2
+                </div>
+                <div class="truncate">
+                    <h1 class="text-sm sm:text-base font-bold text-slate-900 truncate">Grade 2 English Assessment</h1>
+                    <p class="text-xs text-slate-500 truncate">Unit 1 &amp; Unit 2 • 62 Interactive Items</p>
+                </div>
+            </div>
+
+            <!-- Right Controls: Narrator Toggle & Teacher Dashboard -->
+            <div class="flex items-center gap-2 shrink-0">
+                <button id="header-narrator-toggle" onclick="toggleAutoRead()" title="Toggle British Narrator Auto-Read"
+                    class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border transition-all bg-teal-50 text-teal-700 border-teal-200 hover:bg-teal-100">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                    </svg>
+                    <span id="auto-read-label">Auto-Read: ON</span>
+                </button>
+
+                <button onclick="openTeacherDashboard()"
+                    class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs sm:text-sm font-semibold bg-slate-900 text-white hover:bg-slate-800 transition-all shadow-sm">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <span>Teacher Dashboard</span>
+                    <span id="teacher-count-badge" class="ml-0.5 px-1.5 py-0.5 text-[10px] font-bold rounded-full bg-teal-500 text-white">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+    <main class="flex-1 w-full max-w-5xl mx-auto px-4 sm:px-6 py-6 sm:py-8">
+
+        <!-- ==================== VIEW 1: WELCOME & IDENTIFICATION ==================== -->
+        <section id="view-welcome" class="animate-fade-in">
+            <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/60 border border-slate-200/80 overflow-hidden">
+                <!-- Hero Banner -->
+                <div class="bg-gradient-to-r from-teal-600 via-cyan-600 to-indigo-600 px-6 sm:px-10 py-8 sm:py-10 text-white relative overflow-hidden">
+                    <div class="relative z-10 max-w-2xl">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-xs font-semibold tracking-wide uppercase mb-3">
+                            🇬🇧 British Voice Narrator Included • 🇪🇹 English &amp; Amharic Explanations
+                        </span>
+                        <h2 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-2">
+                            Grade 2 English Interactive Quiz
+                        </h2>
+                        <p class="text-teal-50 text-sm sm:text-base leading-relaxed">
+                            Covering <strong>Unit 1: Our Surroundings</strong> and <strong>Unit 2: Days of the Week</strong>. Complete all 62 questions with irreversible instant feedback, bilingual explanations, and automatic grading.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Form & Details Grid -->
+                <div class="p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+                    <!-- Identification Form -->
+                    <div class="lg:col-span-7 space-y-5">
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-900">Student Identification</h3>
+                            <p class="text-sm text-slate-500">Enter your Full Name and ID Number to start the assessment.</p>
+                        </div>
+
+                        <form id="student-form" onsubmit="handleStartQuiz(event)" class="space-y-4">
+                            <div>
+                                <label for="student-name" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                                    Full Name <span class="text-rose-500">*</span>
+                                </label>
+                                <input type="text" id="student-name" required placeholder="e.g., Hana Tesfaye"
+                                    class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition-all text-slate-900 font-medium">
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="student-id" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                                        ID Number <span class="text-rose-500">*</span>
+                                    </label>
+                                    <input type="text" id="student-id" required placeholder="e.g., G2-2026-021"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition-all text-slate-900 font-medium">
+                                </div>
+                                <div>
+                                    <label for="student-grade" class="block text-sm font-semibold text-slate-700 mb-1.5">
+                                        Grade / Section <span class="text-slate-400 font-normal">(Optional)</span>
+                                    </label>
+                                    <input type="text" id="student-grade" placeholder="e.g., Grade 2 - B"
+                                        class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:border-teal-500 focus:ring-4 focus:ring-teal-100 outline-none transition-all text-slate-900 font-medium">
+                                </div>
+                            </div>
+
+                            <div id="form-error" class="hidden p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-sm font-medium"></div>
+
+                            <div class="pt-2">
+                                <button type="submit"
+                                    class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-2xl bg-gradient-to-r from-teal-600 to-indigo-600 hover:from-teal-700 hover:to-indigo-700 text-white font-bold text-base shadow-lg shadow-teal-200 transition-all transform hover:-translate-y-0.5 active:translate-y-0">
+                                    <span>Start Assessment (62 Items)</span>
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Assessment Info & Narrator Preview -->
+                    <div class="lg:col-span-5 space-y-4">
+                        <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200/80 space-y-3">
+                            <h4 class="font-bold text-slate-900 text-sm uppercase tracking-wider flex items-center gap-2">
+                                <span class="w-2 h-2 rounded-full bg-teal-500"></span>
+                                Assessment Structure
+                            </h4>
+                            <ul class="text-sm text-slate-600 space-y-2">
+                                <li class="flex justify-between">
+                                    <span>Unit 1: Our Surroundings</span>
+                                    <span class="font-semibold text-slate-900">31 Items</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span>Unit 2: Days of the Week</span>
+                                    <span class="font-semibold text-slate-900">31 Items</span>
+                                </li>
+                                <li class="pt-2 border-t border-slate-200 text-xs text-slate-500 leading-relaxed">
+                                    Includes <strong>40 Multiple Choice</strong>, <strong>12 Matching</strong> (clickable buttons), and <strong>10 Fill-in-the-Blank</strong> (clickable Word Bank) items.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-teal-50/70 rounded-2xl p-5 border border-teal-100 space-y-3">
+                            <div class="flex items-center gap-2.5">
+                                <div class="w-9 h-9 rounded-full bg-teal-600 text-white flex items-center justify-center text-base shadow-sm">
+                                    👩‍🏫
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-teal-950 text-sm">British Voice Narrator</h4>
+                                    <p id="narrator-voice-name" class="text-xs text-teal-700">Loading British female voice...</p>
+                                </div>
+                            </div>
+                            <p class="text-xs text-teal-900/80 leading-relaxed">
+                                Every question can be read aloud by our British female narrator. Answers lock immediately (<strong>irreversible</strong>) and display instant English &amp; Amharic explanations.
+                            </p>
+                            <button type="button" onclick="testNarrator()"
+                                class="w-full py-2.5 px-4 rounded-xl bg-white hover:bg-teal-100 text-teal-700 font-semibold text-xs border border-teal-200 transition-all flex items-center justify-center gap-2 shadow-sm">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                </svg>
+                                <span>Test British Narrator Voice</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== VIEW 2: INTERACTIVE QUIZ ==================== -->
+        <section id="view-quiz" class="hidden space-y-5 animate-fade-in">
+            <!-- Student & Progress Strip -->
+            <div class="bg-white rounded-2xl p-4 sm:p-5 border border-slate-200 shadow-sm space-y-3">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-teal-100 text-teal-700 font-bold flex items-center justify-center text-sm" id="quiz-avatar">
+                            ST
+                        </div>
+                        <div>
+                            <div class="font-bold text-slate-900 text-sm sm:text-base" id="quiz-student-display">Student Name</div>
+                            <div class="text-xs text-slate-500" id="quiz-id-display">ID: ---</div>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <div class="px-3 py-1.5 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs sm:text-sm font-bold">
+                            Score: <span id="live-score">0</span> / 62
+                        </div>
+                        <button onclick="toggleQuestionMap()"
+                            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs sm:text-sm font-semibold transition-all">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+                            </svg>
+                            <span>All 62 Items</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="space-y-1.5">
+                    <div class="flex justify-between text-xs font-semibold text-slate-500">
+                        <span id="progress-text">Question 1 of 62</span>
+                        <span id="answered-count-text">0 Answered</span>
+                    </div>
+                    <div class="w-full h-2.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div id="progress-bar" class="h-full bg-gradient-to-r from-teal-500 to-indigo-500 rounded-full transition-all duration-300" style="width: 1.6%"></div>
+                    </div>
+                </div>
+
+                <!-- Collapsible 62-Item Question Navigator -->
+                <div id="question-map-panel" class="hidden pt-3 border-t border-slate-100">
+                    <div class="flex flex-wrap items-center justify-between gap-2 mb-2.5">
+                        <span class="text-xs font-bold text-slate-700 uppercase tracking-wider">Jump to any Question</span>
+                        <div class="flex items-center gap-3 text-[11px] font-medium text-slate-500">
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-emerald-500"></span>Correct</span>
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-rose-500"></span>Wrong</span>
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-amber-400"></span>Skipped</span>
+                            <span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-sm bg-slate-200"></span>Unanswered</span>
+                        </div>
+                    </div>
+                    <div id="question-map-grid" class="grid grid-cols-8 sm:grid-cols-12 md:grid-cols-16 gap-1.5">
+                        <!-- Dynamically populated 1..62 -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question Card -->
+            <div class="bg-white rounded-3xl shadow-lg shadow-slate-200/50 border border-slate-200 overflow-hidden">
+                <!-- Card Top Metadata & Narrator Controls -->
+                <div class="bg-slate-50/80 px-5 sm:px-8 py-4 border-b border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                    <div class="flex flex-wrap items-center gap-2">
+                        <span id="unit-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-800">
+                            Unit 1: Our Surroundings
+                        </span>
+                        <span id="part-badge" class="px-3 py-1 rounded-full text-xs font-bold bg-sky-100 text-sky-700">
+                            Part I: Multiple Choice
+                        </span>
+                        <span id="locked-badge" class="hidden px-2.5 py-1 rounded-full text-xs font-bold bg-slate-200 text-slate-700">
+                            🔒 Answer Locked
+                        </span>
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button id="btn-read-question" onclick="readCurrentQuestion()"
+                            class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-xs font-semibold shadow-sm transition-all">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/>
+                            </svg>
+                            <span>Read Aloud (UK)</span>
+                        </button>
+                        <button onclick="stopNarration()" title="Stop Voice"
+                            class="p-2 rounded-xl bg-slate-200 hover:bg-slate-300 text-slate-700 transition-all">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Question Body -->
+                <div class="p-5 sm:p-8 space-y-6">
+                    <p id="question-instruction" class="text-xs font-semibold uppercase tracking-wider text-slate-400">
+                        Choose the best answer from A, B, C, or D.
+                    </p>
+
+                    <h3 id="question-text" class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug">
+                        Loading question...
+                    </h3>
+
+                    <!-- Options Container -->
+                    <div id="options-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                        <!-- Dynamically rendered buttons -->
+                    </div>
+
+                    <!-- Instant Feedback & Bilingual Explanation Box -->
+                    <div id="feedback-box" class="hidden rounded-2xl p-5 border-2 animate-fade-in space-y-3">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div class="flex items-center gap-2.5">
+                                <span id="feedback-icon" class="w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-base shrink-0"></span>
+                                <div>
+                                    <h4 id="feedback-title" class="font-extrabold text-base"></h4>
+                                    <p id="feedback-correct-answer" class="text-xs font-semibold"></p>
+                                </div>
+                            </div>
+                            <button onclick="readExplanation()"
+                                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/80 hover:bg-white text-slate-700 text-xs font-semibold border border-slate-200 shadow-sm transition-all">
+                                🔊 Hear Explanation
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 pt-2 border-t border-black/5">
+                            <div class="bg-white/85 rounded-xl p-3.5 border border-black/5">
+                                <div class="text-[11px] font-bold uppercase tracking-wider text-teal-700 mb-1">English Explanation</div>
+                                <p id="explanation-en" class="text-sm text-slate-700 leading-relaxed"></p>
+                            </div>
+                            <div class="bg-white/85 rounded-xl p-3.5 border border-black/5">
+                                <div class="text-[11px] font-bold uppercase tracking-wider text-indigo-700 mb-1 font-amharic">የአማርኛ ማብራሪያ (Amharic)</div>
+                                <p id="explanation-am" class="text-sm text-slate-800 leading-relaxed font-amharic"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Footer -->
+                <div class="bg-slate-50 px-5 sm:px-8 py-4 border-t border-slate-200 flex flex-wrap items-center justify-between gap-3">
+                    <button id="btn-back" onclick="prevQuestion()"
+                        class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-sm border border-slate-300 shadow-sm transition-all disabled:opacity-40 disabled:cursor-not-allowed">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/>
+                        </svg>
+                        <span>Back</span>
+                    </button>
+
+                    <div class="flex items-center gap-2.5 ml-auto">
+                        <button id="btn-skip-next" onclick="skipOrNextQuestion()"
+                            class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-sm transition-all">
+                            <span id="btn-skip-next-label">Skip / Jump Next</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+
+                        <button id="btn-submit-quiz" onclick="requestSubmitQuiz()"
+                            class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md shadow-emerald-200 transition-all">
+                            <span>Submit Quiz</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== VIEW 3: RESULTS & AUTO-GRADING REPORT ==================== -->
+        <section id="view-results" class="hidden space-y-6 animate-fade-in">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="bg-gradient-to-r from-teal-600 via-cyan-600 to-indigo-600 p-6 sm:p-10 text-white">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between gap-6">
+                        <div class="space-y-2">
+                            <span class="inline-block px-3 py-1 rounded-full bg-white/20 text-xs font-bold uppercase tracking-wider">
+                                Auto-Graded Assessment Report
+                            </span>
+                            <h2 class="text-2xl sm:text-3xl font-extrabold" id="result-student-name">Student Name</h2>
+                            <p class="text-teal-50 text-sm" id="result-student-meta">ID: --- • Completed: ---</p>
+                            <div class="pt-1">
+                                <span id="result-grade-badge" class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-white text-teal-700 font-extrabold text-sm shadow-md">
+                                    🌟 Excellent Work!
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white/15 backdrop-blur-md rounded-2xl p-5 text-center min-w-[170px] border border-white/20">
+                            <div class="text-4xl sm:text-5xl font-black tracking-tight" id="result-percentage">0%</div>
+                            <div class="text-sm font-semibold text-teal-50 mt-1" id="result-fraction">0 / 62 Correct</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakdown Stats -->
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-4 rounded-2xl bg-teal-50 border border-teal-100">
+                            <div class="text-xs font-bold text-teal-700 uppercase">Unit 1: Surroundings</div>
+                            <div class="text-2xl font-extrabold text-teal-950 mt-1" id="stat-unit1">0 / 31</div>
+                            <div class="text-xs text-teal-700 mt-0.5" id="stat-unit1-pct">0%</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-indigo-50 border border-indigo-100">
+                            <div class="text-xs font-bold text-indigo-700 uppercase">Unit 2: Days of Week</div>
+                            <div class="text-2xl font-extrabold text-indigo-950 mt-1" id="stat-unit2">0 / 31</div>
+                            <div class="text-xs text-indigo-700 mt-0.5" id="stat-unit2-pct">0%</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-100">
+                            <div class="text-xs font-bold text-emerald-700 uppercase">Correct Answers</div>
+                            <div class="text-2xl font-extrabold text-emerald-950 mt-1" id="stat-correct">0</div>
+                            <div class="text-xs text-emerald-700 mt-0.5">Out of 62 items</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-rose-50 border border-rose-100">
+                            <div class="text-xs font-bold text-rose-700 uppercase">Wrong / Unanswered</div>
+                            <div class="text-2xl font-extrabold text-rose-950 mt-1" id="stat-wrong">0</div>
+                            <div class="text-xs text-rose-700 mt-0.5" id="stat-unanswered-detail">0 skipped</div>
+                        </div>
+                    </div>
+
+                    <!-- Email & Action Buttons -->
+                    <div class="bg-slate-50 rounded-2xl p-5 border border-slate-200 flex flex-col sm:flex-row flex-wrap items-center justify-between gap-4 no-print">
+                        <div>
+                            <h4 class="font-bold text-slate-900 text-sm">Send Score to Teacher</h4>
+                            <p class="text-xs text-slate-500">Email your complete graded report directly to <strong class="text-teal-700">mesayferedegn2@gmail.com</strong></p>
+                        </div>
+                        <div class="flex flex-wrap items-center gap-2.5 w-full sm:w-auto">
+                            <button onclick="emailResultsToTeacher()"
+                                class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-md shadow-teal-200 transition-all">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                                </svg>
+                                <span>Email Score to Teacher</span>
+                            </button>
+                            <button onclick="copyReportToClipboard()"
+                                class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-sm border border-slate-300 transition-all">
+                                📋 Copy Report
+                            </button>
+                            <button onclick="window.print()"
+                                class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-semibold text-sm border border-slate-300 transition-all">
+                                🖨️ Print
+                            </button>
+                            <button onclick="resetForNewStudent()"
+                                class="flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-semibold text-sm transition-all">
+                                🔄 New Attempt
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detailed Question-by-Question Review -->
+            <div class="bg-white rounded-3xl shadow-sm border border-slate-200 p-6 sm:p-8 space-y-5">
+                <div class="flex flex-wrap items-center justify-between gap-3">
+                    <div>
+                        <h3 class="text-lg font-bold text-slate-900">Detailed Review (All 62 Items)</h3>
+                        <p class="text-xs text-slate-500">Review every question with English &amp; Amharic explanations.</p>
+                    </div>
+                    <div class="flex items-center gap-1.5 bg-slate-100 p-1 rounded-xl no-print">
+                        <button onclick="filterReview('all')" id="rev-filter-all" class="px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-900 shadow-sm">All (62)</button>
+                        <button onclick="filterReview('correct')" id="rev-filter-correct" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900">Correct</button>
+                        <button onclick="filterReview('wrong')" id="rev-filter-wrong" class="px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900">Wrong / Skipped</button>
+                    </div>
+                </div>
+
+                <div id="review-list" class="space-y-3">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== VIEW 4: TEACHER RESULTS DASHBOARD ==================== -->
+        <section id="view-teacher" class="hidden space-y-6 animate-fade-in">
+            <div class="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="bg-slate-900 text-white p-6 sm:p-8 flex flex-wrap items-center justify-between gap-4">
+                    <div>
+                        <span class="inline-block px-2.5 py-1 rounded-md bg-teal-500/20 text-teal-300 text-xs font-bold uppercase tracking-wider mb-2">
+                            Instructor Portal
+                        </span>
+                        <h2 class="text-2xl font-extrabold">Teacher Summary Dashboard</h2>
+                        <p class="text-slate-400 text-sm mt-1">View Grade 2 student scores, unit performance, and export assessment records.</p>
+                    </div>
+                    <div class="flex items-center gap-2.5">
+                        <button onclick="exportTeacherCSV()"
+                            class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs sm:text-sm transition-all">
+                            ⬇️ Export CSV
+                        </button>
+                        <button onclick="closeTeacherDashboard()"
+                            class="px-4 py-2.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-xs sm:text-sm transition-all">
+                            ← Back to Quiz
+                        </button>
+                    </div>
+                </div>
+
+                <div class="p-6 sm:p-8 space-y-6">
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                        <div class="p-4 rounded-2xl bg-slate-50 border border-slate-200">
+                            <div class="text-xs font-bold text-slate-500 uppercase">Total Submissions</div>
+                            <div class="text-2xl font-extrabold text-slate-900 mt-1" id="dash-total">0</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-teal-50 border border-teal-100">
+                            <div class="text-xs font-bold text-teal-700 uppercase">Class Average</div>
+                            <div class="text-2xl font-extrabold text-teal-950 mt-1" id="dash-avg">0%</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-emerald-50 border border-emerald-100">
+                            <div class="text-xs font-bold text-emerald-700 uppercase">Highest Score</div>
+                            <div class="text-2xl font-extrabold text-emerald-950 mt-1" id="dash-high">0 / 62</div>
+                        </div>
+                        <div class="p-4 rounded-2xl bg-amber-50 border border-amber-100">
+                            <div class="text-xs font-bold text-amber-700 uppercase">Teacher Email</div>
+                            <div class="text-xs sm:text-sm font-bold text-amber-950 mt-2 truncate" title="mesayferedegn2@gmail.com">mesayferedegn2@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="overflow-x-auto rounded-2xl border border-slate-200">
+                        <table class="w-full text-left border-collapse">
+                            <thead>
+                                <tr class="bg-slate-50 border-b border-slate-200 text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    <th class="py-3.5 px-4">Student Name</th>
+                                    <th class="py-3.5 px-4">ID Number</th>
+                                    <th class="py-3.5 px-4">Grade/Sec</th>
+                                    <th class="py-3.5 px-4">Unit 1</th>
+                                    <th class="py-3.5 px-4">Unit 2</th>
+                                    <th class="py-3.5 px-4">Total Score</th>
+                                    <th class="py-3.5 px-4">Percentage</th>
+                                    <th class="py-3.5 px-4">Time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="teacher-table-body" class="divide-y divide-slate-100 text-sm">
+                                <!-- Populated by JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ==================== CUSTOM CONFIRMATION MODAL ==================== -->
+    <div id="custom-modal" class="hidden fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-7 shadow-2xl border border-slate-200 animate-fade-in space-y-5">
+            <div class="flex items-start gap-3.5">
+                <div class="w-11 h-11 rounded-2xl bg-amber-100 text-amber-600 flex items-center justify-center text-xl shrink-0">
+                    📝
+                </div>
+                <div>
+                    <h3 id="modal-title" class="text-lg font-extrabold text-slate-900">Submit Assessment?</h3>
+                    <p id="modal-message" class="text-sm text-slate-600 mt-1 leading-relaxed"></p>
+                </div>
+            </div>
+            <div class="flex items-center justify-end gap-2.5 pt-2">
+                <button onclick="closeModal()"
+                    class="px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-semibold text-sm transition-all">
+                    Keep Working
+                </button>
+                <button id="modal-confirm-btn" onclick="finalizeAndGradeQuiz()"
+                    class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm shadow-md transition-all">
+                    Yes, Submit Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TOAST NOTIFICATION ==================== -->
+    <div id="toast" class="hidden fixed bottom-5 right-5 z-50 bg-slate-900 text-white px-5 py-3.5 rounded-2xl shadow-xl text-sm font-semibold flex items-center gap-2.5 animate-fade-in">
+        <span id="toast-message">Notification</span>
+    </div>
+
+    <!-- ==================== APPLICATION LOGIC & COMPLETE 62-ITEM GRADE 2 DATASET ==================== -->
+    <script>
+        /**
+         * COMPLETE 62-ITEM GRADE 2 ASSESSMENT BANK
+         * Unit 1: Our Surroundings (20 MCQs, 6 Matching, 5 Fill-in-the-Blank) = 31 items
+         * Unit 2: Days of the Week (20 MCQs, 6 Matching, 5 Fill-in-the-Blank) = 31 items
+         * Every item is strictly verified against the official answer key and includes detailed English & Amharic explanations.
+         */
+
+        const UNIT1_MATCHING_OPTIONS = [
+            { key: 'A', text: 'Cousin' },
+            { key: 'B', text: 'In' },
+            { key: 'C', text: 'Eraser' },
+            { key: 'D', text: 'She\'s' },
+            { key: 'E', text: 'Door' },
+            { key: 'F', text: 'That' },
+            { key: 'G', text: 'Doll' },
+            { key: 'H', text: 'Under' }
+        ];
+
+        const UNIT1_WORDBANK = ['under', 'These', 'pleasure', 'like', 'blackboard'];
+
+        const UNIT2_MATCHING_OPTIONS = [
+            { key: 'A', text: 'Sunday' },
+            { key: 'B', text: 'Tuesday' },
+            { key: 'C', text: 'First' },
+            { key: 'D', text: 'Thursday' },
+            { key: 'E', text: 'Friday' },
+            { key: 'F', text: 'Monday' },
+            { key: 'G', text: 'Wednesday' },
+            { key: 'H', text: 'Sixth' }
+        ];
+
+        const UNIT2_WORDBANK = ['after', 'between', 'seven', 'before', 'Tuesday'];
+
+        const QUESTIONS = [
+            // ================= UNIT 1: PART I — MULTIPLE CHOICE (1–20) =================
+            {
+                id: 1, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which classroom item is used to write on a blackboard?",
+                options: [
+                    { key: "A", text: "Eraser" }, { key: "B", text: "Book" }, { key: "C", text: "Chalk" }, { key: "D", text: "Duster" }
+                ],
+                correct: "C",
+                en: "'Chalk' is the white or colored stick teachers and students use to write on a blackboard. A duster cleans it, and an eraser rubs pencil marks on paper.",
+                am: "'Chalk' (ጠመኔ) በጥቁር ሰሌዳ (blackboard) ላይ ለመጻፍ የሚያገለግል የክፍል ውስጥ ዕቃ ነው።"
+            },
+            {
+                id: 2, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which classroom object is used to clean writing off the blackboard?",
+                options: [
+                    { key: "A", text: "Duster" }, { key: "B", text: "Pen" }, { key: "C", text: "Pencil" }, { key: "D", text: "Book" }
+                ],
+                correct: "A",
+                en: "A 'Duster' is used to wipe and clean chalk writing off the blackboard.",
+                am: "'Duster' (የሰሌዳ መጥረጊያ) በጥቁር ሰሌዳ ላይ የተጻፈውን ጠመኔ ለማጥፋት የሚያገለግል ዕቃ ነው።"
+            },
+            {
+                id: 3, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which word is the polite reply to 'How are you?'",
+                options: [
+                    { key: "A", text: "They are beds." }, { key: "B", text: "It's a tiger." }, { key: "C", text: "Goodbye!" }, { key: "D", text: "I'm fine, thank you." }
+                ],
+                correct: "D",
+                en: "When someone asks 'How are you?' to greet you, the polite and correct response is 'I'm fine, thank you.'",
+                am: "አንድ ሰው 'How are you?' (እንዴት ነህ/ነሽ?) ብሎ ሲጠይቅ ትክክለኛው እና ጨዋነት ያለው መልስ 'I'm fine, thank you.' (ደህና ነኝ፣ አመሰግናለሁ) ነው።"
+            },
+            {
+                id: 4, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What do you call your father's or mother's brother?",
+                options: [
+                    { key: "A", text: "Aunt" }, { key: "B", text: "Uncle" }, { key: "C", text: "Cousin" }, { key: "D", text: "Grandfather" }
+                ],
+                correct: "B",
+                en: "Your father's brother or your mother's brother is called your 'Uncle'. (Your father's or mother's sister is your aunt.)",
+                am: "የአባትህ/ሽ ወይም የእናትህ/ሽ ወንድም በእንግሊዝኛ 'Uncle' (አጎት) ይባላል።"
+            },
+            {
+                id: 5, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What do you call your father's or mother's mother?",
+                options: [
+                    { key: "A", text: "Grandmother" }, { key: "B", text: "Grandfather" }, { key: "C", text: "Sister" }, { key: "D", text: "Aunt" }
+                ],
+                correct: "A",
+                en: "Your father's mother or your mother's mother is called your 'Grandmother'.",
+                am: "የአባትህ/ሽ ወይም የእናትህ/ሽ እናት በእንግሊዝኛ 'Grandmother' (ሴት አያት) ትባላለች።"
+            },
+            {
+                id: 6, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which of the following is a farm animal?",
+                options: [
+                    { key: "A", text: "Lion" }, { key: "B", text: "Zebra" }, { key: "C", text: "Tiger" }, { key: "D", text: "Sheep" }
+                ],
+                correct: "D",
+                en: "A 'Sheep' is a domestic farm animal raised by people. Lion, zebra, and tiger are wild animals.",
+                am: "'Sheep' (በግ) በቤት/በእርሻ አካባቢ የሚረባ የቤት እንስሳ ነው። ሌሎቹ (አንበሳ፣ የሜዳ አህያ፣ ነብር) የዱር እንስሳት ናቸው።"
+            },
+            {
+                id: 7, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which word has a LONG vowel sound?",
+                options: [
+                    { key: "A", text: "Doll" }, { key: "B", text: "Goat" }, { key: "C", text: "Got" }, { key: "D", text: "Live" }
+                ],
+                correct: "B",
+                en: "'Goat' has a long vowel sound /oʊ/ (spelled 'oa'). 'Doll', 'Got', and 'Live' (verb) all have short vowel sounds.",
+                am: "'Goat' (ፍየል) የሚለው ቃል ረዥም አናባቢ ድምጽ (long vowel sound) አለው። ሌሎቹ አጭር አናባቢ ድምጽ አላቸው።"
+            },
+            {
+                id: 8, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which word has a SHORT vowel sound?",
+                options: [
+                    { key: "A", text: "Door" }, { key: "B", text: "Leave" }, { key: "C", text: "Ship" }, { key: "D", text: "Sheep" }
+                ],
+                correct: "C",
+                en: "'Ship' has the short /ɪ/ vowel sound, whereas 'Door', 'Leave', and 'Sheep' all contain long vowel sounds.",
+                am: "'Ship' (መርከብ) የሚለው ቃል አጭር የ 'i' አናባቢ ድምጽ (short vowel sound) አለው። ሌሎቹ ረዥም አናባቢ ድምጽ አላቸው።"
+            },
+            {
+                id: 9, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which word pair shows a short vowel sound followed by a long vowel sound?",
+                options: [
+                    { key: "A", text: "Leave — Live" }, { key: "B", text: "Got — Goat" }, { key: "C", text: "Door — Doll" }, { key: "D", text: "Goat — Got" }
+                ],
+                correct: "B",
+                en: "In 'Got — Goat', 'Got' has a short 'o' sound first, and 'Goat' has a long 'o' sound second. The other options have the long vowel first.",
+                am: "በ 'Got — Goat' ጥንድ ውስጥ መጀመሪያ 'Got' አጭር አናባቢ ድምጽ ሲኖረው፣ ቀጥሎ 'Goat' ረዥም አናባቢ ድምጽ አለው።"
+            },
+            {
+                id: 10, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Choose the correct demonstrative for ONE object near you: '________ is a pen.'",
+                options: [
+                    { key: "A", text: "This" }, { key: "B", text: "They" }, { key: "C", text: "Those" }, { key: "D", text: "These" }
+                ],
+                correct: "A",
+                en: "We use 'This' to point to a single (one) object that is near us: 'This is a pen.'",
+                am: "በቅርብ ላለ አንድ ነጠላ ዕቃ ለማመልከት 'This' (ይህ) እንጠቀማለን፦ 'This is a pen.' (ይህ እስክሪብቶ ነው።)"
+            },
+            {
+                id: 11, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Choose the correct article: 'That is ________ orange.'",
+                options: [
+                    { key: "A", text: "a" }, { key: "B", text: "those" }, { key: "C", text: "these" }, { key: "D", text: "an" }
+                ],
+                correct: "D",
+                en: "We use the article 'an' before singular nouns that begin with a vowel sound (a, e, i, o, u). Since 'orange' starts with 'o', we say 'an orange'.",
+                am: "በአናባቢ ድምጽ (a, e, i, o, u) ከሚጀምሩ ነጠላ ስሞች በፊት 'an' እንጠቀማለን። 'orange' በ 'o' ስለሚጀምር 'an orange' እንላለን።"
+            },
+            {
+                id: 12, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which plural demonstrative refers to objects that are NEAR you?",
+                options: [
+                    { key: "A", text: "That" }, { key: "B", text: "This" }, { key: "C", text: "These" }, { key: "D", text: "Those" }
+                ],
+                correct: "C",
+                en: "'These' is the plural demonstrative used for two or more objects that are close to you (e.g., 'These are books').",
+                am: "'These' (እነዚህ) በቅርብ ያሉ ብዙ ነገሮችን ለማመልከት የሚያገለግል ቃል ነው።"
+            },
+            {
+                id: 13, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which plural demonstrative refers to objects that are FAR from you?",
+                options: [
+                    { key: "A", text: "Those" }, { key: "B", text: "These" }, { key: "C", text: "That" }, { key: "D", text: "This" }
+                ],
+                correct: "A",
+                en: "'Those' is the plural demonstrative used to point to two or more objects that are far away from you.",
+                am: "'Those' (እነዚያ) በሩቅ ያሉ ብዙ ነገሮችን ለማመልከት የሚያገለግል ቃል ነው።"
+            },
+            {
+                id: 14, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which question correctly asks about plural objects?",
+                options: [
+                    { key: "A", text: "What is this?" }, { key: "B", text: "What are they?" }, { key: "C", text: "Where is it?" }, { key: "D", text: "What is that?" }
+                ],
+                correct: "B",
+                en: "'What are they?' uses the plural verb 'are' and plural pronoun 'they' to ask about more than one object.",
+                am: "'What are they?' (እነሱ ምንድን ናቸው?) ብዙ ነገሮችን ለመጠየቅ የሚያገለግል ትክክለኛ የብዙ ቁጥር ጥያቄ ነው።"
+            },
+            {
+                id: 15, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Choose the correct answer to 'Do you have a ruler?'",
+                options: [
+                    { key: "A", text: "No, it is a dog." }, { key: "B", text: "Yes, I am a nurse." }, { key: "C", text: "Yes, I have a ruler." }, { key: "D", text: "They are clothes." }
+                ],
+                correct: "C",
+                en: "The question 'Do you have a ruler?' asks about possession, so the matching answer is 'Yes, I have a ruler.'",
+                am: "'Do you have a ruler?' (ማስመሪያ አለህ/ሽ?) ለሚለው ጥያቄ ትክክለኛው መልስ 'Yes, I have a ruler.' (አዎ፣ ማስመሪያ አለኝ) ነው።"
+            },
+            {
+                id: 16, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which sentence correctly expresses a dislike?",
+                options: [
+                    { key: "A", text: "I like banana." }, { key: "B", text: "This is a chair." }, { key: "C", text: "We're farmers." }, { key: "D", text: "I dislike lemon." }
+                ],
+                correct: "D",
+                en: "'I dislike lemon.' uses the verb 'dislike' to express not liking something.",
+                am: "'I dislike lemon.' (ሎሚ አልወድም) አንድን ነገር አለመውደድን (dislike) የሚገልጽ ትክክለኛ ዓረፍተ ነገር ነው።"
+            },
+            {
+                id: 17, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What is the correct contracted form of 'I am a student'?",
+                options: [
+                    { key: "A", text: "Im' a student." }, { key: "B", text: "I'm a student." }, { key: "C", text: "I're a student." }, { key: "D", text: "I's a student." }
+                ],
+                correct: "B",
+                en: "When we contract 'I am', we replace the missing letter 'a' with an apostrophe to make \"I'm\": \"I'm a student.\"",
+                am: "'I am' በአጭሩ ሲጻፍ (contraction) 'a' ፊደል በትእምርተ ጭረት (') ተተክቶ \"I'm\" ይሆናል፦ \"I'm a student.\""
+            },
+            {
+                id: 18, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What is the full form of 'They're nurses'?",
+                options: [
+                    { key: "A", text: "They is nurses." }, { key: "B", text: "There are nurses." }, { key: "C", text: "They am nurses." }, { key: "D", text: "They are nurses." }
+                ],
+                correct: "D",
+                en: "\"They're\" is the contraction of 'They are'. Therefore, the full sentence is 'They are nurses.'",
+                am: "\"They're\" የሚለው ቃል የ 'They are' አጭር ቅርጽ ነው። ስለዚህ ሙሉው ዓረፍተ ነገር 'They are nurses.' (እነሱ ነርሶች ናቸው) ነው።"
+            },
+            {
+                id: 19, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Choose the correct possessive word: 'The cat drinks ________ milk.'",
+                options: [
+                    { key: "A", text: "its" }, { key: "B", text: "she's" }, { key: "C", text: "he's" }, { key: "D", text: "it's" }
+                ],
+                correct: "A",
+                en: "'its' (without an apostrophe) is the possessive adjective showing belonging to an animal or thing. (\"it's\" means 'it is'.)",
+                am: "'its' (ያለ ትእምርተ ጭረት) የእንስሳ ወይም የዕቃ ባለቤትነትን ያሳያል፦ 'The cat drinks its milk.' (ድመቷ ወተቷን ትጠጣለች።)"
+            },
+            {
+                id: 20, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Choose the correct contraction: '________ important to read.'",
+                options: [
+                    { key: "A", text: "I're" }, { key: "B", text: "We's" }, { key: "C", text: "It's" }, { key: "D", text: "Its" }
+                ],
+                correct: "C",
+                en: "\"It's\" (with an apostrophe) is the contracted form of 'It is', making the sentence \"It's important to read.\"",
+                am: "\"It's\" (ከትእምርተ ጭረት ጋር) የ 'It is' አጭር ቅርጽ ነው፦ \"It's important to read.\" (ማንበብ አስፈላጊ ነው።)"
+            },
+
+            // ================= UNIT 1: PART II — MATCHING (Items 1–6 => Q21–26) =================
+            {
+                id: 21, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part II: Matching (1 of 6)", type: "matching",
+                question: "Match Column A with Column B: A classroom tool used to rub out pencil marks on paper",
+                options: UNIT1_MATCHING_OPTIONS,
+                correct: "C",
+                en: "An 'Eraser' (Option C) is used to rub out pencil mistakes on paper.",
+                am: "በወረቀት ላይ በእርሳስ የተጻፈን ለማጥፋት የሚያገለግል ዕቃ 'Eraser' (ላጲስ - ምርጫ C) ይባላል።"
+            },
+            {
+                id: 22, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part II: Matching (2 of 6)", type: "matching",
+                question: "Match Column A with Column B: Your uncle's or aunt's child in a family tree",
+                options: UNIT1_MATCHING_OPTIONS,
+                correct: "A",
+                en: "The child of your uncle or aunt is called your 'Cousin' (Option A).",
+                am: "የአጎትህ/ሽ ወይም የአክስትህ/ሽ ልጅ በእንግሊዝኛ 'Cousin' (ምርጫ A) ይባላል።"
+            },
+            {
+                id: 23, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part II: Matching (3 of 6)", type: "matching",
+                question: "Match Column A with Column B: A long-vowel word meaning an entrance to a room or house",
+                options: UNIT1_MATCHING_OPTIONS,
+                correct: "E",
+                en: "'Door' (Option E) has a long vowel sound and means the entrance to a room or house.",
+                am: "'Door' (በር - ምርጫ E) ረዥም አናባቢ ድምጽ ያለው ሲሆን ወደ ክፍል ወይም ቤት መግቢያ ማለት ነው።"
+            },
+            {
+                id: 24, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part II: Matching (4 of 6)", type: "matching",
+                question: "Match Column A with Column B: The contracted form of the two words 'She is'",
+                options: UNIT1_MATCHING_OPTIONS,
+                correct: "D",
+                en: "Combining 'She' and 'is' with an apostrophe gives \"She's\" (Option D).",
+                am: "'She is' የሚሉት ሁለት ቃላት በአጭሩ ሲጻፉ \"She's\" (ምርጫ D) ይሆናሉ።"
+            },
+            {
+                id: 25, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part II: Matching (5 of 6)", type: "matching",
+                question: "Match Column A with Column B: A preposition showing that a ball is inside a box",
+                options: UNIT1_MATCHING_OPTIONS,
+                correct: "B",
+                en: "The preposition 'In' (Option B) shows that something is inside an enclosed space like a box.",
+                am: "አንድ ኳስ በሳጥን ውስጥ መሆኑን የሚያሳይ መስተዋድድ 'In' (ውስጥ - ምርጫ B) ነው።"
+            },
+            {
+                id: 26, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part II: Matching (6 of 6)", type: "matching",
+                question: "Match Column A with Column B: A singular demonstrative used to point to a far object",
+                options: UNIT1_MATCHING_OPTIONS,
+                correct: "F",
+                en: "'That' (Option F) is the singular demonstrative used to point to one object far away.",
+                am: "በሩቅ ያለ አንድ ነጠላ ዕቃን ለማመልከት 'That' (ያ - ምርጫ F) እንጠቀማለን።"
+            },
+
+            // ================= UNIT 1: PART III — FILL IN THE BLANK (Items 1–5 => Q27–31) =================
+            {
+                id: 27, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part III: Fill in the Blank (1 of 5)", type: "fill",
+                question: "A polite reply to 'Thank you' is 'My ________________.'",
+                wordBank: UNIT1_WORDBANK,
+                correct: "pleasure",
+                en: "When someone says 'Thank you', a polite reply is 'My pleasure.' (meaning you were happy to help).",
+                am: "አንድ ሰው 'Thank you' (አመሰግናለሁ) ሲል ጨዋነት ያለው መልስ 'My pleasure.' (ደስታዬ ነው) የሚለው ነው።"
+            },
+            {
+                id: 28, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part III: Fill in the Blank (2 of 5)", type: "fill",
+                question: "The teacher writes on the ________________ in the classroom.",
+                wordBank: UNIT1_WORDBANK,
+                correct: "blackboard",
+                en: "Teachers write lessons with chalk on the classroom 'blackboard'.",
+                am: "መምህር በመማሪያ ክፍል ውስጥ በ 'blackboard' (ጥቁር ሰሌዳ) ላይ ይጽፋሉ።"
+            },
+            {
+                id: 29, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part III: Fill in the Blank (3 of 5)", type: "fill",
+                question: "________________ pens are expensive, while those pencils are cheap.",
+                wordBank: UNIT1_WORDBANK,
+                correct: "These",
+                en: "'These' is used for plural objects near the speaker, contrasting with 'those' for far objects.",
+                am: "'These' (እነዚህ) በቅርብ ላሉ ብዙ እስክሪብቶዎች የሚያገለግል ሲሆን ከ 'those' (እነዚያ) ጋር ይነጻጸራል።"
+            },
+            {
+                id: 30, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part III: Fill in the Blank (4 of 5)", type: "fill",
+                question: "When a duster is beneath a chair, it is ________________ the chair.",
+                wordBank: UNIT1_WORDBANK,
+                correct: "under",
+                en: "The preposition 'under' means directly beneath or below something.",
+                am: "የሰሌዳ መጥረጊያው ከወንበር ስር ሲሆን በእንግሊዝኛ 'under' (ከስር) እንላለን።"
+            },
+            {
+                id: 31, unit: 1, unitName: "Unit 1: Our Surroundings", part: "Part III: Fill in the Blank (5 of 5)", type: "fill",
+                question: "Unscramble the sentence: 'like / I / a cat' → I ________________ a cat.",
+                wordBank: UNIT1_WORDBANK,
+                correct: "like",
+                en: "Putting the words in standard Subject + Verb + Object order forms: 'I like a cat.'",
+                am: "ቃላቱን በትክክለኛ የዓረፍተ ነገር ቅደም ተከተል ስናስተካክል 'I like a cat.' (ድመት እወዳለሁ) ይሆናል።"
+            },
+
+            // ================= UNIT 2: PART I — MULTIPLE CHOICE (1–20 => Q32–51) =================
+            {
+                id: 32, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "How many days are there in one week?",
+                options: [
+                    { key: "A", text: "Five" }, { key: "B", text: "Seven" }, { key: "C", text: "Eight" }, { key: "D", text: "Six" }
+                ],
+                correct: "B",
+                en: "One full week has 'Seven' days: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, and Sunday.",
+                am: "በአንድ ሳምንት ውስጥ 'Seven' (ሰባት) ቀናት አሉ።"
+            },
+            {
+                id: 33, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What is the ordinal number word for the figure 2?",
+                options: [
+                    { key: "A", text: "Twenty" }, { key: "B", text: "Two" }, { key: "C", text: "Twelve" }, { key: "D", text: "Second" }
+                ],
+                correct: "D",
+                en: "Ordinal numbers show position or order (1st = First, 2nd = Second, 3rd = Third). So the ordinal word for 2 is 'Second'.",
+                am: "ተራ ቁጥር (Ordinal number) ቅደም ተከተልን ያሳያል። የ 2 ተራ ቁጥር 'Second' (ሁለተኛ) ነው።"
+            },
+            {
+                id: 34, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What is the ordinal number word for the figure 4?",
+                options: [
+                    { key: "A", text: "Fourth" }, { key: "B", text: "Four" }, { key: "C", text: "Forty" }, { key: "D", text: "Fourteen" }
+                ],
+                correct: "A",
+                en: "The ordinal number word for 4 (4th) is 'Fourth'. ('Four' is the cardinal number.)",
+                am: "የ 4 ተራ ቁጥር (4th) በእንግሊዝኛ 'Fourth' (አራተኛ) ይባላል።"
+            },
+            {
+                id: 35, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day is the first day of the week?",
+                options: [
+                    { key: "A", text: "Wednesday" }, { key: "B", text: "Tuesday" }, { key: "C", text: "Monday" }, { key: "D", text: "Sunday" }
+                ],
+                correct: "C",
+                en: "In our Grade 2 English syllabus (school week order), 'Monday' is the first (1st) day of the week.",
+                am: "በትምህርት ቤት የሳምንቱ ቀናት ቅደም ተከተል መሰረት 'Monday' (ሰኞ) የሳምንቱ የመጀመሪያ ቀን ነው።"
+            },
+            {
+                id: 36, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day is the third day of the school week?",
+                options: [
+                    { key: "A", text: "Tuesday" }, { key: "B", text: "Thursday" }, { key: "C", text: "Friday" }, { key: "D", text: "Wednesday" }
+                ],
+                correct: "D",
+                en: "Counting the school days: 1st Monday, 2nd Tuesday, 3rd 'Wednesday'.",
+                am: "የትምህርት ቀናትን ስንቆጥር፦ 1ኛ ሰኞ፣ 2ኛ ማክሰኞ፣ 3ኛ 'Wednesday' (ረቡዕ) ነው።"
+            },
+            {
+                id: 37, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day is the fifth day of the school week?",
+                options: [
+                    { key: "A", text: "Thursday" }, { key: "B", text: "Friday" }, { key: "C", text: "Monday" }, { key: "D", text: "Saturday" }
+                ],
+                correct: "B",
+                en: "Counting from Monday: 1st Monday, 2nd Tuesday, 3rd Wednesday, 4th Thursday, 5th 'Friday'.",
+                am: "ከሰኞ ጀምሮ ስንቆጥር አምስተኛው የትምህርት ቀን 'Friday' (ዓርብ) ነው።"
+            },
+            {
+                id: 38, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What is the sixth day of the week?",
+                options: [
+                    { key: "A", text: "Friday" }, { key: "B", text: "Tuesday" }, { key: "C", text: "Saturday" }, { key: "D", text: "Sunday" }
+                ],
+                correct: "C",
+                en: "After Friday (5th day), 'Saturday' is the sixth (6th) day of the week.",
+                am: "ከዓርብ (5ኛው ቀን) ቀጥሎ የሚመጣው ስድስተኛው የሳምንቱ ቀን 'Saturday' (ቅዳሜ) ነው።"
+            },
+            {
+                id: 39, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "What is the seventh day of the week?",
+                options: [
+                    { key: "A", text: "Sunday" }, { key: "B", text: "Monday" }, { key: "C", text: "Saturday" }, { key: "D", text: "Thursday" }
+                ],
+                correct: "A",
+                en: "'Sunday' is the seventh (7th) and final day of the week after Saturday.",
+                am: "'Sunday' (እሁድ) ሰባተኛው እና የሳምንቱ የመጨረሻ ቀን ነው።"
+            },
+            {
+                id: 40, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "If today is Monday, what is tomorrow?",
+                options: [
+                    { key: "A", text: "Wednesday" }, { key: "B", text: "Sunday" }, { key: "C", text: "Tuesday" }, { key: "D", text: "Friday" }
+                ],
+                correct: "C",
+                en: "Tomorrow is the day right after today. The day immediately after Monday is 'Tuesday'.",
+                am: "ዛሬ ሰኞ (Monday) ከሆነ፣ ነገ (tomorrow) ከሰኞ ቀጥሎ ያለው 'Tuesday' (ማክሰኞ) ነው።"
+            },
+            {
+                id: 41, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day comes immediately after Wednesday?",
+                options: [
+                    { key: "A", text: "Friday" }, { key: "B", text: "Thursday" }, { key: "C", text: "Monday" }, { key: "D", text: "Tuesday" }
+                ],
+                correct: "B",
+                en: "In the weekly sequence (Monday, Tuesday, Wednesday, Thursday...), 'Thursday' comes immediately after Wednesday.",
+                am: "ከረቡዕ (Wednesday) ወዲያውኑ ቀጥሎ የሚመጣው ቀን 'Thursday' (ሐሙስ) ነው።"
+            },
+            {
+                id: 42, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day comes immediately before Monday?",
+                options: [
+                    { key: "A", text: "Sunday" }, { key: "B", text: "Saturday" }, { key: "C", text: "Tuesday" }, { key: "D", text: "Wednesday" }
+                ],
+                correct: "A",
+                en: "Because the week repeats in a cycle, 'Sunday' comes immediately before Monday.",
+                am: "ሳምንቱ በዙር ስለሚቀጥል ከሰኞ (Monday) በፊት የሚመጣው ቀን 'Sunday' (እሁድ) ነው።"
+            },
+            {
+                id: 43, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day comes in between Monday and Wednesday?",
+                options: [
+                    { key: "A", text: "Sunday" }, { key: "B", text: "Thursday" }, { key: "C", text: "Friday" }, { key: "D", text: "Tuesday" }
+                ],
+                correct: "D",
+                en: "Looking at Monday — Tuesday — Wednesday, the day right in the middle (in between) is 'Tuesday'.",
+                am: "በሰኞ (Monday) እና በረቡዕ (Wednesday) መካከል የሚገኘው ቀን 'Tuesday' (ማክሰኞ) ነው።"
+            },
+            {
+                id: 44, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day comes in between Thursday and Saturday?",
+                options: [
+                    { key: "A", text: "Tuesday" }, { key: "B", text: "Friday" }, { key: "C", text: "Wednesday" }, { key: "D", text: "Sunday" }
+                ],
+                correct: "B",
+                en: "In the order Thursday — Friday — Saturday, 'Friday' is the day in between Thursday and Saturday.",
+                am: "በሐሙስ (Thursday) እና በቅዳሜ (Saturday) መካከል የሚገኘው ቀን 'Friday' (ዓርብ) ነው።"
+            },
+            {
+                id: 45, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "In the line 'Debora — Akkati — Kumale', who is standing in between Debora and Kumale?",
+                options: [
+                    { key: "A", text: "Akkati" }, { key: "B", text: "Hanna" }, { key: "C", text: "Debora" }, { key: "D", text: "Kumale" }
+                ],
+                correct: "A",
+                en: "In the line 'Debora — Akkati — Kumale', 'Akkati' is in the middle position between Debora and Kumale.",
+                am: "በ 'Debora — Akkati — Kumale' ሰልፍ ውስጥ በዴቦራ እና በኩማሌ መካከል የቆመችው 'Akkati' (አካቲ) ናት።"
+            },
+            {
+                id: 46, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day of the week begins with the letter 'W'?",
+                options: [
+                    { key: "A", text: "Sunday" }, { key: "B", text: "Friday" }, { key: "C", text: "Monday" }, { key: "D", text: "Wednesday" }
+                ],
+                correct: "D",
+                en: "'Wednesday' is the only day of the week that begins with the letter 'W'.",
+                am: "በ 'W' ፊደል የሚጀምረው የሳምንቱ ቀን 'Wednesday' (ረቡዕ) ብቻ ነው።"
+            },
+            {
+                id: 47, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which two days of the week begin with the letter 'S'?",
+                options: [
+                    { key: "A", text: "Sunday and Monday" }, { key: "B", text: "Saturday and Friday" }, { key: "C", text: "Saturday and Sunday" }, { key: "D", text: "Tuesday and Thursday" }
+                ],
+                correct: "C",
+                en: "The weekend days, 'Saturday and Sunday', are the two days of the week that start with the letter 'S'.",
+                am: "በ 'S' ፊደል የሚጀምሩት ሁለቱ የሳምንቱ ቀናት 'Saturday and Sunday' (ቅዳሜ እና እሁድ) ናቸው።"
+            },
+            {
+                id: 48, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Which day of the week is spelled CORRECTLY?",
+                options: [
+                    { key: "A", text: "Wednesday" }, { key: "B", text: "Wenesday" }, { key: "C", text: "Wednsday" }, { key: "D", text: "Wedensday" }
+                ],
+                correct: "A",
+                en: "'Wednesday' is spelled W-e-d-n-e-s-d-a-y (note the silent 'd' after 'We').",
+                am: "'Wednesday' (ረቡዕ) በትክክል የሚጻፈው W-e-d-n-e-s-d-a-y ተብሎ ነው።"
+            },
+            {
+                id: 49, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Fill in the missing letters to spell a day of the week: 'Th_r_da_'",
+                options: [
+                    { key: "A", text: "a, s, y" }, { key: "B", text: "u, z, y" }, { key: "C", text: "u, s, y" }, { key: "D", text: "e, s, y" }
+                ],
+                correct: "C",
+                en: "Inserting 'u', 's', and 'y' completes the spelling of 'Thursday' (T-h-u-r-s-d-a-y).",
+                am: "'u, s, y' ፊደላትን በባዶ ቦታዎቹ ስናስገባ 'Thursday' (ሐሙስ) የሚለውን ትክክለኛ ቃል ይሰጠናል።"
+            },
+            {
+                id: 50, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Unscramble the letters 'oManyd' to make the name of a day.",
+                options: [
+                    { key: "A", text: "Sunday" }, { key: "B", text: "Friday" }, { key: "C", text: "Tuesday" }, { key: "D", text: "Monday" }
+                ],
+                correct: "D",
+                en: "Rearranging the letters 'oManyd' in the right order spells 'Monday'.",
+                am: "'oManyd' የሚሉትን የተዘበራረቁ ፊደላት በትክክል ስናስተካክል 'Monday' (ሰኞ) የሚለውን ቃል እናገኛለን።"
+            },
+            {
+                id: 51, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part I: Multiple Choice", type: "mcq",
+                question: "Unscramble the letters 'truSadya' to make the name of a day.",
+                options: [
+                    { key: "A", text: "Sunday" }, { key: "B", text: "Saturday" }, { key: "C", text: "Thursday" }, { key: "D", text: "Tuesday" }
+                ],
+                correct: "B",
+                en: "Rearranging the letters 'truSadya' correctly spells 'Saturday'.",
+                am: "'truSadya' የሚሉትን የተዘበራረቁ ፊደላት በትክክል ስናስተካክል 'Saturday' (ቅዳሜ) የሚለውን ቃል እናገኛለን።"
+            },
+
+            // ================= UNIT 2: PART II — MATCHING (Items 1–6 => Q52–57) =================
+            {
+                id: 52, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part II: Matching (1 of 6)", type: "matching",
+                question: "Match Column A with Column B: The second day of the week, right after Monday",
+                options: UNIT2_MATCHING_OPTIONS,
+                correct: "B",
+                en: "'Tuesday' (Option B) is the 2nd day of the week and comes right after Monday.",
+                am: "ከሰኞ ቀጥሎ የሚመጣው ሁለተኛው የሳምንቱ ቀን 'Tuesday' (ማክሰኞ - ምርጫ B) ነው።"
+            },
+            {
+                id: 53, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part II: Matching (2 of 6)", type: "matching",
+                question: "Match Column A with Column B: The fourth day of the week, between Wednesday and Friday",
+                options: UNIT2_MATCHING_OPTIONS,
+                correct: "D",
+                en: "'Thursday' (Option D) is the 4th day of the week, situated between Wednesday and Friday.",
+                am: "በረቡዕ እና በዓርብ መካከል የሚገኘው አራተኛው የሳምንቱ ቀን 'Thursday' (ሐሙስ - ምርጫ D) ነው።"
+            },
+            {
+                id: 54, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part II: Matching (3 of 6)", type: "matching",
+                question: "Match Column A with Column B: The seventh and last day of the week",
+                options: UNIT2_MATCHING_OPTIONS,
+                correct: "A",
+                en: "'Sunday' (Option A) is the 7th and last day of the week.",
+                am: "ሰባተኛው እና የሳምንቱ የመጨረሻ ቀን 'Sunday' (እሁድ - ምርጫ A) ነው።"
+            },
+            {
+                id: 55, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part II: Matching (4 of 6)", type: "matching",
+                question: "Match Column A with Column B: The ordinal number word that matches the figure 1",
+                options: UNIT2_MATCHING_OPTIONS,
+                correct: "C",
+                en: "The ordinal number word for 1 (1st) is 'First' (Option C).",
+                am: "ከ 1 ቁጥር ጋር የሚዛመደው ተራ ቁጥር 'First' (አንደኛ - ምርጫ C) ነው።"
+            },
+            {
+                id: 56, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part II: Matching (5 of 6)", type: "matching",
+                question: "Match Column A with Column B: The unscrambled day formed from the letters 'yidFar'",
+                options: UNIT2_MATCHING_OPTIONS,
+                correct: "E",
+                en: "Unscrambling the letters 'yidFar' forms the day 'Friday' (Option E).",
+                am: "'yidFar' የሚሉትን ፊደላት በትክክል ስናስተካክል 'Friday' (ዓርብ - ምርጫ E) ይሆናል።"
+            },
+            {
+                id: 57, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part II: Matching (6 of 6)", type: "matching",
+                question: "Match Column A with Column B: The ordinal number word that matches the figure 6",
+                options: UNIT2_MATCHING_OPTIONS,
+                correct: "H",
+                en: "The ordinal number word for 6 (6th) is 'Sixth' (Option H).",
+                am: "ከ 6 ቁጥር ጋር የሚዛመደው ተራ ቁጥር 'Sixth' (ስድስተኛ - ምርጫ H) ነው።"
+            },
+
+            // ================= UNIT 2: PART III — FILL IN THE BLANK (Items 1–5 => Q58–62) =================
+            {
+                id: 58, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part III: Fill in the Blank (1 of 5)", type: "fill",
+                question: "There are ________________ days in a full week.",
+                wordBank: UNIT2_WORDBANK,
+                correct: "seven",
+                en: "A complete week always consists of 'seven' days (Monday through Sunday).",
+                am: "በአንድ ሙሉ ሳምንት ውስጥ 'seven' (ሰባት) ቀናት አሉ።"
+            },
+            {
+                id: 59, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part III: Fill in the Blank (2 of 5)", type: "fill",
+                question: "The second day of the week is ________________.",
+                wordBank: UNIT2_WORDBANK,
+                correct: "Tuesday",
+                en: "Monday is the first day and 'Tuesday' is the second day of the week.",
+                am: "የሳምንቱ ሁለተኛ ቀን 'Tuesday' (ማክሰኞ) ነው።"
+            },
+            {
+                id: 60, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part III: Fill in the Blank (3 of 5)", type: "fill",
+                question: "Wednesday comes ________________ Tuesday.",
+                wordBank: UNIT2_WORDBANK,
+                correct: "after",
+                en: "Since Tuesday is day 2 and Wednesday is day 3, Wednesday comes 'after' Tuesday.",
+                am: "ረቡዕ ከማክሰኞ ቀጥሎ ስለሚመጣ 'after' (በኋላ/ቀጥሎ) የሚለውን ቃል እንጠቀማለን።"
+            },
+            {
+                id: 61, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part III: Fill in the Blank (4 of 5)", type: "fill",
+                question: "Saturday comes ________________ Sunday.",
+                wordBank: UNIT2_WORDBANK,
+                correct: "before",
+                en: "Saturday (day 6) arrives earlier than Sunday (day 7), so Saturday comes 'before' Sunday.",
+                am: "ቅዳሜ ከእሁድ ቀድሞ ስለሚመጣ 'before' (በፊት) የሚለውን ቃል እንጠቀማለን።"
+            },
+            {
+                id: 62, unit: 2, unitName: "Unit 2: Days of the Week", part: "Part III: Fill in the Blank (5 of 5)", type: "fill",
+                question: "Friday comes in ________________ Thursday and Saturday.",
+                wordBank: UNIT2_WORDBANK,
+                correct: "between",
+                en: "In the order Thursday — Friday — Saturday, Friday is in 'between' Thursday and Saturday.",
+                am: "ዓርብ በሐሙስ እና በቅዳሜ መካከል ስለሚገኝ 'between' (መካከል) የሚለውን ቃል እንጠቀማለን።"
+            }
+        ];
+
+        // ==================== APPLICATION STATE ====================
+        const TEACHER_EMAIL = "mesayferedegn2@gmail.com";
+
+        let state = {
+            student: { name: "", id: "", grade: "" },
+            currentIndex: 0,
+            answers: {},
+            skipped: {},
+            autoRead: true,
+            isSubmitted: false,
+            previousView: "view-welcome",
+            teacherRecords: [],
+            reviewFilter: "all"
+        };
+
+        // ==================== BRITISH FEMALE NARRATOR ====================
+        let selectedBritishVoice = null;
+
+        function loadBritishFemaleVoice() {
+            if (!('speechSynthesis' in window)) {
+                document.getElementById('narrator-voice-name').textContent = "Speech not supported in this browser";
+                return;
+            }
+            const voices = window.speechSynthesis.getVoices();
+            if (!voices.length) return;
+
+            const preferredNames = [
+                'google uk english female',
+                'libby', 'sonia', 'hazel', 'susan', 'serena', 'martha', 'kate', 'stephanie', 'amy', 'emma', 'fiona'
+            ];
+
+            // 1. en-GB + female voice name
+            selectedBritishVoice = voices.find(v =>
+                (v.lang.toLowerCase().includes('en-gb') || v.lang.toLowerCase().includes('en_gb')) &&
+                preferredNames.some(name => v.name.toLowerCase().includes(name))
+            );
+            // 2. Any en-GB voice not labeled Male
+            if (!selectedBritishVoice) {
+                selectedBritishVoice = voices.find(v =>
+                    (v.lang.toLowerCase().includes('en-gb') || v.lang.toLowerCase().includes('en_gb')) &&
+                    !v.name.toLowerCase().includes('male')
+                );
+            }
+            // 3. Any en-GB voice
+            if (!selectedBritishVoice) {
+                selectedBritishVoice = voices.find(v =>
+                    v.lang.toLowerCase().includes('en-gb') || v.lang.toLowerCase().includes('en_gb')
+                );
+            }
+            // 4. Fallback English female voice
+            if (!selectedBritishVoice) {
+                selectedBritishVoice = voices.find(v =>
+                    v.lang.toLowerCase().startsWith('en') &&
+                    (v.name.toLowerCase().includes('female') || preferredNames.some(n => v.name.toLowerCase().includes(n)))
+                ) || voices.find(v => v.lang.toLowerCase().startsWith('en')) || voices[0];
+            }
+
+            const voiceLabel = document.getElementById('narrator-voice-name');
+            if (voiceLabel && selectedBritishVoice) {
+                voiceLabel.textContent = `Active Voice: ${selectedBritishVoice.name} (${selectedBritishVoice.lang})`;
+            }
+        }
+
+        if ('speechSynthesis' in window) {
+            loadBritishFemaleVoice();
+            window.speechSynthesis.onvoiceschanged = loadBritishFemaleVoice;
+        }
+
+        function speakText(text) {
+            if (!('speechSynthesis' in window)) {
+                showToast("Voice narration is not supported in this browser.");
+                return;
+            }
+            window.speechSynthesis.cancel();
+            const cleanText = text.replace(/________________/g, ' blank ').replace(/—/g, ' to ');
+            const utterance = new SpeechSynthesisUtterance(cleanText);
+            if (selectedBritishVoice) {
+                utterance.voice = selectedBritishVoice;
+                utterance.lang = selectedBritishVoice.lang;
+            } else {
+                utterance.lang = 'en-GB';
+            }
+            utterance.rate = 0.94;
+            utterance.pitch = 1.08;
+
+            const btn = document.getElementById('btn-read-question');
+            utterance.onstart = () => { if (btn) btn.classList.add('speaking-pulse'); };
+            utterance.onend = () => { if (btn) btn.classList.remove('speaking-pulse'); };
+            utterance.onerror = () => { if (btn) btn.classList.remove('speaking-pulse'); };
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        function stopNarration() {
+            if ('speechSynthesis' in window) {
+                window.speechSynthesis.cancel();
+            }
+            const btn = document.getElementById('btn-read-question');
+            if (btn) btn.classList.remove('speaking-pulse');
+        }
+
+        function testNarrator() {
+            speakText("Hello! I am your British English narrator. Welcome to the Grade 2 English Assessment. Let's do wonderfully today!");
+        }
+
+        function toggleAutoRead() {
+            state.autoRead = !state.autoRead;
+            const label = document.getElementById('auto-read-label');
+            const btn = document.getElementById('header-narrator-toggle');
+            if (state.autoRead) {
+                label.textContent = "Auto-Read: ON";
+                btn.className = "hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border transition-all bg-teal-50 text-teal-700 border-teal-200 hover:bg-teal-100";
+                showToast("British Narrator Auto-Read enabled");
+            } else {
+                label.textContent = "Auto-Read: OFF";
+                btn.className = "hidden sm:inline-flex items-center gap-1.5 px-3 py-2 rounded-xl text-xs font-semibold border transition-all bg-slate-100 text-slate-600 border-slate-200 hover:bg-slate-200";
+                stopNarration();
+                showToast("British Narrator Auto-Read muted");
+            }
+        }
+
+        function readCurrentQuestion() {
+            const q = QUESTIONS[state.currentIndex];
+            let script = `Question ${q.id}. ${q.question}`;
+            if (q.type === 'mcq') {
+                script += " " + q.options.map(o => `Option ${o.key}, ${o.text}.`).join(" ");
+            }
+            speakText(script);
+        }
+
+        function readExplanation() {
+            const q = QUESTIONS[state.currentIndex];
+            speakText(q.en);
+        }
+
+        // ==================== VIEW MANAGEMENT ====================
+        function showView(viewId) {
+            stopNarration();
+            ['view-welcome', 'view-quiz', 'view-results', 'view-teacher'].forEach(id => {
+                document.getElementById(id).classList.add('hidden');
+            });
+            document.getElementById(viewId).classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function showToast(msg) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toast-message').textContent = msg;
+            toast.classList.remove('hidden');
+            clearTimeout(window._toastTimer);
+            window._toastTimer = setTimeout(() => {
+                toast.classList.add('hidden');
+            }, 3000);
+        }
+
+        // ==================== START QUIZ ====================
+        function handleStartQuiz(e) {
+            e.preventDefault();
+            const nameInput = document.getElementById('student-name').value.trim();
+            const idInput = document.getElementById('student-id').value.trim();
+            const gradeInput = document.getElementById('student-grade').value.trim();
+            const errBox = document.getElementById('form-error');
+
+            if (!nameInput || !idInput) {
+                errBox.textContent = "Please enter both your Full Name and ID Number to begin.";
+                errBox.classList.remove('hidden');
+                return;
+            }
+            errBox.classList.add('hidden');
+
+            state.student = { name: nameInput, id: idInput, grade: gradeInput || "Grade 2" };
+            state.currentIndex = 0;
+            state.answers = {};
+            state.skipped = {};
+            state.isSubmitted = false;
+
+            document.getElementById('quiz-student-display').textContent = state.student.name;
+            document.getElementById('quiz-id-display').textContent = `ID: ${state.student.id} • ${state.student.grade}`;
+            const initials = state.student.name.split(' ').map(w => w[0]).join('').substring(0, 2).toUpperCase();
+            document.getElementById('quiz-avatar').textContent = initials || "ST";
+
+            showView('view-quiz');
+            renderQuestion();
+            renderQuestionMap();
+        }
+
+        // ==================== RENDER QUESTION ====================
+        function renderQuestion() {
+            const q = QUESTIONS[state.currentIndex];
+            const userAnswer = state.answers[q.id];
+            const isLocked = userAnswer !== undefined;
+
+            const unitBadge = document.getElementById('unit-badge');
+            unitBadge.textContent = q.unitName;
+            unitBadge.className = q.unit === 1
+                ? "px-3 py-1 rounded-full text-xs font-bold bg-teal-100 text-teal-800"
+                : "px-3 py-1 rounded-full text-xs font-bold bg-indigo-100 text-indigo-800";
+
+            document.getElementById('part-badge').textContent = q.part;
+            document.getElementById('locked-badge').classList.toggle('hidden', !isLocked);
+
+            const instr = document.getElementById('question-instruction');
+            if (q.type === 'mcq') {
+                instr.textContent = "Choose the best answer from A, B, C, or D. (Irreversible once selected)";
+            } else if (q.type === 'matching') {
+                instr.textContent = "Click the button for the matching option in Column B. (Irreversible once selected)";
+            } else {
+                instr.textContent = "Click the correct word from the Word Bank to fill in the blank. (Irreversible once selected)";
+            }
+
+            const qTextEl = document.getElementById('question-text');
+            if (q.type === 'fill') {
+                if (isLocked) {
+                    const isCorrect = userAnswer === q.correct;
+                    const pillClass = isCorrect
+                        ? "bg-emerald-100 text-emerald-800 border-emerald-400"
+                        : "bg-rose-100 text-rose-800 border-rose-400 line-through";
+                    const filledHTML = `<span class="inline-block px-3 py-0.5 mx-1 rounded-lg border-2 font-extrabold ${pillClass}">${escapeHtml(userAnswer)}</span>`;
+                    qTextEl.innerHTML = `${q.id}. ${escapeHtml(q.question).replace('________________', filledHTML)}`;
+                } else {
+                    const blankHTML = `<span class="inline-block px-5 py-0.5 mx-1 rounded-lg border-2 border-dashed border-teal-400 bg-teal-50 text-teal-500 font-bold">_____</span>`;
+                    qTextEl.innerHTML = `${q.id}. ${escapeHtml(q.question).replace('________________', blankHTML)}`;
+                }
+            } else {
+                qTextEl.textContent = `${q.id}. ${q.question}`;
+            }
+
+            const container = document.getElementById('options-container');
+            container.innerHTML = '';
+
+            if (q.type === 'mcq') {
+                container.className = "grid grid-cols-1 sm:grid-cols-2 gap-3.5";
+                q.options.forEach(opt => {
+                    container.appendChild(createOptionButton(opt.key, opt.text, q.correct, userAnswer, isLocked, () => selectAnswer(q.id, opt.key)));
+                });
+            } else if (q.type === 'matching') {
+                container.className = "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3";
+                q.options.forEach(opt => {
+                    container.appendChild(createOptionButton(opt.key, opt.text, q.correct, userAnswer, isLocked, () => selectAnswer(q.id, opt.key)));
+                });
+            } else if (q.type === 'fill') {
+                container.className = "flex flex-wrap gap-3 pt-1";
+                q.wordBank.forEach(word => {
+                    container.appendChild(createWordBankButton(word, q.correct, userAnswer, isLocked, () => selectAnswer(q.id, word)));
+                });
+            }
+
+            renderFeedback(q, userAnswer);
+            updateProgressUI();
+
+            if (state.autoRead && !isLocked) {
+                readCurrentQuestion();
+            }
+        }
+
+        function createOptionButton(key, text, correctKey, userAnswer, isLocked, onClickFn) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.disabled = isLocked;
+
+            let classes = "group relative flex items-center gap-3.5 p-4 rounded-2xl border-2 text-left transition-all duration-200 ";
+            let badgeClasses = "w-9 h-9 rounded-xl flex items-center justify-center font-extrabold text-sm shrink-0 transition-colors ";
+
+            if (!isLocked) {
+                classes += "bg-white border-slate-200 hover:border-teal-500 hover:bg-teal-50/50 hover:shadow-md cursor-pointer active:scale-[0.99]";
+                badgeClasses += "bg-slate-100 text-slate-700 group-hover:bg-teal-600 group-hover:text-white";
+            } else {
+                const isThisCorrect = key === correctKey;
+                const isThisSelected = key === userAnswer;
+
+                if (isThisCorrect) {
+                    classes += "bg-emerald-50 border-emerald-500 text-emerald-950 shadow-sm cursor-not-allowed";
+                    badgeClasses += "bg-emerald-500 text-white";
+                } else if (isThisSelected && !isThisCorrect) {
+                    classes += "bg-rose-50 border-rose-500 text-rose-950 shadow-sm cursor-not-allowed";
+                    badgeClasses += "bg-rose-500 text-white";
+                } else {
+                    classes += "bg-slate-50 border-slate-200 text-slate-400 opacity-65 cursor-not-allowed";
+                    badgeClasses += "bg-slate-200 text-slate-500";
+                }
+            }
+
+            btn.className = classes;
+            let statusIcon = '';
+            if (isLocked && key === correctKey) statusIcon = '<span class="ml-auto text-emerald-600 font-extrabold text-lg">✓</span>';
+            else if (isLocked && key === userAnswer && key !== correctKey) statusIcon = '<span class="ml-auto text-rose-600 font-extrabold text-lg">✗</span>';
+
+            btn.innerHTML = `
+                <span class="${badgeClasses}">${escapeHtml(key)}</span>
+                <span class="font-semibold text-sm sm:text-base leading-snug">${escapeHtml(text)}</span>
+                ${statusIcon}
+            `;
+
+            if (!isLocked) btn.addEventListener('click', onClickFn);
+            return btn;
+        }
+
+        function createWordBankButton(word, correctWord, userAnswer, isLocked, onClickFn) {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.disabled = isLocked;
+
+            let classes = "px-5 py-3.5 rounded-2xl border-2 font-bold text-base transition-all duration-200 flex items-center gap-2 ";
+            if (!isLocked) {
+                classes += "bg-white border-teal-200 text-teal-900 hover:border-teal-600 hover:bg-teal-600 hover:text-white hover:shadow-md cursor-pointer active:scale-95";
+            } else {
+                const isThisCorrect = word === correctWord;
+                const isThisSelected = word === userAnswer;
+
+                if (isThisCorrect) classes += "bg-emerald-50 border-emerald-500 text-emerald-900 shadow-sm cursor-not-allowed";
+                else if (isThisSelected && !isThisCorrect) classes += "bg-rose-50 border-rose-500 text-rose-900 shadow-sm cursor-not-allowed";
+                else classes += "bg-slate-50 border-slate-200 text-slate-400 opacity-60 cursor-not-allowed";
+            }
+
+            btn.className = classes;
+            let icon = '';
+            if (isLocked && word === correctWord) icon = '<span>✓</span>';
+            else if (isLocked && word === userAnswer && word !== correctWord) icon = '<span>✗</span>';
+
+            btn.innerHTML = `<span>${escapeHtml(word)}</span>${icon}`;
+            if (!isLocked) btn.addEventListener('click', onClickFn);
+            return btn;
+        }
+
+        // ==================== SELECT ANSWER (IRREVERSIBLE) ====================
+        function selectAnswer(questionId, selectedValue) {
+            if (state.answers[questionId] !== undefined) return; // Irreversible lock
+
+            state.answers[questionId] = selectedValue;
+            delete state.skipped[questionId];
+
+            const q = QUESTIONS.find(item => item.id === questionId);
+            const isCorrect = selectedValue === q.correct;
+
+            renderQuestion();
+            renderQuestionMap();
+
+            if (state.autoRead) {
+                if (isCorrect) {
+                    speakText("Well done! That is correct.");
+                } else {
+                    const correctDisplay = getReadableAnswer(q, q.correct);
+                    speakText(`Not quite. The correct answer is ${correctDisplay}.`);
+                }
+            }
+        }
+
+        function getReadableAnswer(q, val) {
+            if (q.type === 'fill') return val;
+            const found = q.options.find(o => o.key === val);
+            return found ? `${found.key}. ${found.text}` : val;
+        }
+
+        function renderFeedback(q, userAnswer) {
+            const box = document.getElementById('feedback-box');
+            if (userAnswer === undefined) {
+                box.classList.add('hidden');
+                return;
+            }
+
+            const isCorrect = userAnswer === q.correct;
+            box.classList.remove('hidden');
+
+            const icon = document.getElementById('feedback-icon');
+            const title = document.getElementById('feedback-title');
+            const correctAnsEl = document.getElementById('feedback-correct-answer');
+
+            if (isCorrect) {
+                box.className = "rounded-2xl p-5 border-2 animate-fade-in space-y-3 bg-emerald-50/90 border-emerald-300";
+                icon.className = "w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-base shrink-0 bg-emerald-500";
+                icon.textContent = "✓";
+                title.className = "font-extrabold text-base text-emerald-900";
+                title.textContent = "Correct! / ትክክል ነው!";
+                correctAnsEl.className = "text-xs font-semibold text-emerald-700";
+                correctAnsEl.textContent = `Your answer (${getReadableAnswer(q, userAnswer)}) is right.`;
+            } else {
+                box.className = "rounded-2xl p-5 border-2 animate-fade-in space-y-3 bg-rose-50/90 border-rose-300";
+                icon.className = "w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-base shrink-0 bg-rose-500";
+                icon.textContent = "✗";
+                title.className = "font-extrabold text-base text-rose-900";
+                title.textContent = "Incorrect / ትክክል አይደለም";
+                correctAnsEl.className = "text-xs font-semibold text-rose-800";
+                correctAnsEl.textContent = `Correct Answer: ${getReadableAnswer(q, q.correct)}`;
+            }
+
+            document.getElementById('explanation-en').textContent = q.en;
+            document.getElementById('explanation-am').textContent = q.am;
+        }
+
+        // ==================== NAVIGATION & PROGRESS ====================
+        function updateProgressUI() {
+            const total = QUESTIONS.length;
+            const currentNum = state.currentIndex + 1;
+            const answeredCount = Object.keys(state.answers).length;
+            const correctCount = QUESTIONS.filter(q => state.answers[q.id] === q.correct).length;
+
+            document.getElementById('live-score').textContent = correctCount;
+            document.getElementById('progress-text').textContent = `Question ${currentNum} of ${total}`;
+            document.getElementById('answered-count-text').textContent = `${answeredCount} of ${total} Answered`;
+            document.getElementById('progress-bar').style.width = `${(currentNum / total) * 100}%`;
+
+            document.getElementById('btn-back').disabled = state.currentIndex === 0;
+
+            const q = QUESTIONS[state.currentIndex];
+            const isAnswered = state.answers[q.id] !== undefined;
+            const skipBtn = document.getElementById('btn-skip-next');
+            const skipLabel = document.getElementById('btn-skip-next-label');
+
+            if (state.currentIndex === total - 1) {
+                skipBtn.classList.add('hidden');
+            } else {
+                skipBtn.classList.remove('hidden');
+                if (isAnswered) {
+                    skipLabel.textContent = "Next Question";
+                    skipBtn.className = "inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-teal-600 hover:bg-teal-700 text-white font-bold text-sm shadow-sm transition-all";
+                } else {
+                    skipLabel.textContent = "Skip / Jump Next";
+                    skipBtn.className = "inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-amber-500 hover:bg-amber-600 text-white font-bold text-sm shadow-sm transition-all";
+                }
+            }
+        }
+
+        function prevQuestion() {
+            if (state.currentIndex > 0) {
+                stopNarration();
+                state.currentIndex--;
+                renderQuestion();
+                renderQuestionMap();
+            }
+        }
+
+        function skipOrNextQuestion() {
+            const q = QUESTIONS[state.currentIndex];
+            if (state.answers[q.id] === undefined) {
+                state.skipped[q.id] = true;
+            }
+            if (state.currentIndex < QUESTIONS.length - 1) {
+                stopNarration();
+                state.currentIndex++;
+                renderQuestion();
+                renderQuestionMap();
+            }
+        }
+
+        function jumpToQuestion(idx) {
+            stopNarration();
+            state.currentIndex = idx;
+            renderQuestion();
+            renderQuestionMap();
+        }
+
+        function toggleQuestionMap() {
+            document.getElementById('question-map-panel').classList.toggle('hidden');
+        }
+
+        function renderQuestionMap() {
+            const grid = document.getElementById('question-map-grid');
+            grid.innerHTML = '';
+            QUESTIONS.forEach((q, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.textContent = q.id;
+                btn.onclick = () => jumpToQuestion(idx);
+
+                const ans = state.answers[q.id];
+                const isCurrent = idx === state.currentIndex;
+                let cls = "h-8 rounded-lg text-xs font-bold transition-all flex items-center justify-center ";
+
+                if (ans !== undefined) {
+                    cls += ans === q.correct
+                        ? "bg-emerald-500 text-white hover:bg-emerald-600 "
+                        : "bg-rose-500 text-white hover:bg-rose-600 ";
+                } else if (state.skipped[q.id]) {
+                    cls += "bg-amber-400 text-amber-950 hover:bg-amber-500 ";
+                } else {
+                    cls += "bg-slate-100 text-slate-600 hover:bg-slate-200 ";
+                }
+
+                if (isCurrent) {
+                    cls += "ring-2 ring-teal-600 ring-offset-1 scale-105 ";
+                }
+
+                btn.className = cls;
+                grid.appendChild(btn);
+            });
+        }
+
+        // ==================== SUBMISSION & AUTO-GRADING ====================
+        function requestSubmitQuiz() {
+            const total = QUESTIONS.length;
+            const answered = Object.keys(state.answers).length;
+            const remaining = total - answered;
+
+            const modal = document.getElementById('custom-modal');
+            const title = document.getElementById('modal-title');
+            const msg = document.getElementById('modal-message');
+
+            if (remaining > 0) {
+                title.textContent = "Unanswered Questions Remaining";
+                msg.textContent = `You have answered ${answered} out of ${total} questions (${remaining} left unanswered). Are you sure you want to submit and grade your assessment now?`;
+            } else {
+                title.textContent = "Ready to Submit Assessment?";
+                msg.textContent = `Wonderful! You have answered all ${total} questions. Click "Yes, Submit Now" to view your auto-graded results and email them to your teacher.`;
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('custom-modal').classList.add('hidden');
+        }
+
+        function finalizeAndGradeQuiz() {
+            closeModal();
+            stopNarration();
+            state.isSubmitted = true;
+
+            const total = QUESTIONS.length;
+            let totalCorrect = 0;
+            let unit1Correct = 0;
+            let unit2Correct = 0;
+            let unanswered = 0;
+
+            QUESTIONS.forEach(q => {
+                const ans = state.answers[q.id];
+                if (ans === undefined) {
+                    unanswered++;
+                } else if (ans === q.correct) {
+                    totalCorrect++;
+                    if (q.unit === 1) unit1Correct++;
+                    else unit2Correct++;
+                }
+            });
+
+            const pct = Math.round((totalCorrect / total) * 100);
+            const timestamp = new Date().toLocaleString();
+
+            const record = {
+                name: state.student.name,
+                id: state.student.id,
+                grade: state.student.grade,
+                unit1: unit1Correct,
+                unit2: unit2Correct,
+                total: totalCorrect,
+                max: total,
+                percentage: pct,
+                unanswered: unanswered,
+                timestamp: timestamp
+            };
+            state.teacherRecords.unshift(record);
+            document.getElementById('teacher-count-badge').textContent = state.teacherRecords.length;
+
+            document.getElementById('result-student-name').textContent = record.name;
+            document.getElementById('result-student-meta').textContent = `ID: ${record.id} • ${record.grade} • Submitted: ${record.timestamp}`;
+            document.getElementById('result-percentage').textContent = `${pct}%`;
+            document.getElementById('result-fraction').textContent = `${totalCorrect} / ${total} Correct`;
+
+            const badge = document.getElementById('result-grade-badge');
+            if (pct >= 90) badge.textContent = "🌟 Excellent Work! (A+)";
+            else if (pct >= 75) badge.textContent = "👏 Very Good! (A)";
+            else if (pct >= 60) badge.textContent = "👍 Good Effort! (B)";
+            else badge.textContent = "📚 Keep Practicing! (C)";
+
+            document.getElementById('stat-unit1').textContent = `${unit1Correct} / 31`;
+            document.getElementById('stat-unit1-pct').textContent = `${Math.round((unit1Correct / 31) * 100)}%`;
+            document.getElementById('stat-unit2').textContent = `${unit2Correct} / 31`;
+            document.getElementById('stat-unit2-pct').textContent = `${Math.round((unit2Correct / 31) * 100)}%`;
+            document.getElementById('stat-correct').textContent = totalCorrect;
+            document.getElementById('stat-wrong').textContent = total - totalCorrect;
+            document.getElementById('stat-unanswered-detail').textContent = `${unanswered} unanswered / skipped`;
+
+            state.reviewFilter = 'all';
+            renderReviewList();
+            showView('view-results');
+
+            if (state.autoRead) {
+                speakText(`Assessment complete! Well done, ${record.name}. You scored ${totalCorrect} out of ${total}, which is ${pct} percent.`);
+            }
+        }
+
+        // ==================== DETAILED REVIEW LIST ====================
+        function filterReview(filterType) {
+            state.reviewFilter = filterType;
+            ['all', 'correct', 'wrong'].forEach(f => {
+                const btn = document.getElementById(`rev-filter-${f}`);
+                btn.className = f === filterType
+                    ? "px-3 py-1.5 rounded-lg text-xs font-bold bg-white text-slate-900 shadow-sm"
+                    : "px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-600 hover:text-slate-900";
+            });
+            renderReviewList();
+        }
+
+        function renderReviewList() {
+            const list = document.getElementById('review-list');
+            list.innerHTML = '';
+
+            const filtered = QUESTIONS.filter(q => {
+                const isCorrect = state.answers[q.id] === q.correct;
+                if (state.reviewFilter === 'correct') return isCorrect;
+                if (state.reviewFilter === 'wrong') return !isCorrect;
+                return true;
+            });
+
+            if (!filtered.length) {
+                list.innerHTML = `<div class="p-8 text-center text-slate-400 text-sm font-medium">No items match this filter.</div>`;
+                return;
+            }
+
+            filtered.forEach(q => {
+                const userAns = state.answers[q.id];
+                const isCorrect = userAns === q.correct;
+                const statusBadge = isCorrect
+                    ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-emerald-100 text-emerald-700">✓ Correct</span>`
+                    : (userAns === undefined
+                        ? `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-100 text-amber-800">⚠ Skipped</span>`
+                        : `<span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-rose-100 text-rose-700">✗ Incorrect</span>`);
+
+                const card = document.createElement('div');
+                card.className = `p-4 sm:p-5 rounded-2xl border ${isCorrect ? 'border-emerald-200 bg-emerald-50/30' : 'border-rose-200 bg-rose-50/30'} space-y-2.5`;
+                card.innerHTML = `
+                    <div class="flex flex-wrap items-center justify-between gap-2">
+                        <span class="text-xs font-bold text-slate-500">Q${q.id} • ${q.unitName} • ${q.part}</span>
+                        ${statusBadge}
+                    </div>
+                    <p class="font-bold text-slate-900 text-sm sm:text-base">${escapeHtml(q.question)}</p>
+                    <div class="flex flex-wrap gap-4 text-xs sm:text-sm">
+                        <div><span class="text-slate-500">Your Answer:</span> <strong class="${isCorrect ? 'text-emerald-700' : 'text-rose-700'}">${userAns !== undefined ? escapeHtml(getReadableAnswer(q, userAns)) : 'None'}</strong></div>
+                        <div><span class="text-slate-500">Correct Answer:</span> <strong class="text-emerald-700">${escapeHtml(getReadableAnswer(q, q.correct))}</strong></div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2.5 pt-2 border-t border-slate-200/70 text-xs">
+                        <div class="bg-white p-3 rounded-xl border border-slate-100">
+                            <span class="font-bold text-teal-700 block mb-0.5">English:</span>
+                            <span class="text-slate-700">${escapeHtml(q.en)}</span>
+                        </div>
+                        <div class="bg-white p-3 rounded-xl border border-slate-100 font-amharic">
+                            <span class="font-bold text-indigo-700 block mb-0.5">አማርኛ:</span>
+                            <span class="text-slate-800">${escapeHtml(q.am)}</span>
+                        </div>
+                    </div>
+                `;
+                list.appendChild(card);
+            });
+        }
+
+        // ==================== EMAIL SCORE TO TEACHER ====================
+        function buildPlainTextReport() {
+            const latest = state.teacherRecords[0];
+            if (!latest) return "";
+            return [
+                `GRADE 2 ENGLISH ASSESSMENT REPORT (UNIT 1 & UNIT 2)`,
+                `====================================================`,
+                `Student Name : ${latest.name}`,
+                `ID Number    : ${latest.id}`,
+                `Grade/Section: ${latest.grade}`,
+                `Date & Time  : ${latest.timestamp}`,
+                `----------------------------------------------------`,
+                `TOTAL SCORE  : ${latest.total} / ${latest.max} (${latest.percentage}%)`,
+                `Unit 1 Score : ${latest.unit1} / 31 (${Math.round((latest.unit1 / 31) * 100)}%)`,
+                `Unit 2 Score : ${latest.unit2} / 31 (${Math.round((latest.unit2 / 31) * 100)}%)`,
+                `Unanswered   : ${latest.unanswered}`,
+                `====================================================`,
+                `Sent via Grade 2 Interactive English Assessment Portal.`
+            ].join('\n');
+        }
+
+        function emailResultsToTeacher() {
+            const latest = state.teacherRecords[0];
+            if (!latest) return;
+            const subject = encodeURIComponent(`Grade 2 English Score: ${latest.name} (ID: ${latest.id}) - ${latest.total}/${latest.max} (${latest.percentage}%)`);
+            const body = encodeURIComponent(buildPlainTextReport());
+            window.location.href = `mailto:${TEACHER_EMAIL}?subject=${subject}&body=${body}`;
+            showToast(`Opening email app to send score to ${TEACHER_EMAIL}`);
+        }
+
+        function copyReportToClipboard() {
+            const text = buildPlainTextReport();
+            const textarea = document.createElement('textarea');
+            textarea.value = text;
+            textarea.style.position = 'fixed';
+            textarea.style.opacity = '0';
+            document.body.appendChild(textarea);
+            textarea.select();
+            try {
+                document.execCommand('copy');
+                showToast("Report copied! You can paste it into an email.");
+            } catch (err) {
+                showToast("Could not copy automatically. Please print or use Email button.");
+            }
+            document.body.removeChild(textarea);
+        }
+
+        function resetForNewStudent() {
+            document.getElementById('student-name').value = '';
+            document.getElementById('student-id').value = '';
+            document.getElementById('student-grade').value = '';
+            showView('view-welcome');
+        }
+
+        // ==================== TEACHER DASHBOARD ====================
+        function openTeacherDashboard() {
+            ['view-welcome', 'view-quiz', 'view-results'].forEach(v => {
+                if (!document.getElementById(v).classList.contains('hidden')) {
+                    state.previousView = v;
+                }
+            });
+            renderTeacherDashboard();
+            showView('view-teacher');
+        }
+
+        function closeTeacherDashboard() {
+            showView(state.previousView || 'view-welcome');
+        }
+
+        function renderTeacherDashboard() {
+            const records = state.teacherRecords;
+            document.getElementById('dash-total').textContent = records.length;
+
+            if (records.length > 0) {
+                const avg = Math.round(records.reduce((acc, r) => acc + r.percentage, 0) / records.length);
+                const high = Math.max(...records.map(r => r.total));
+                document.getElementById('dash-avg').textContent = `${avg}%`;
+                document.getElementById('dash-high').textContent = `${high} / 62`;
+            } else {
+                document.getElementById('dash-avg').textContent = "0%";
+                document.getElementById('dash-high').textContent = "0 / 62";
+            }
+
+            const tbody = document.getElementById('teacher-table-body');
+            tbody.innerHTML = '';
+
+            if (!records.length) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="8" class="py-10 px-4 text-center text-slate-400">
+                            No student submissions recorded yet in this session. Complete a quiz to see results appear here automatically.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            records.forEach(r => {
+                const pctColor = r.percentage >= 75 ? 'bg-emerald-100 text-emerald-800' : (r.percentage >= 50 ? 'bg-amber-100 text-amber-800' : 'bg-rose-100 text-rose-800');
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition-colors";
+                tr.innerHTML = `
+                    <td class="py-3.5 px-4 font-bold text-slate-900">${escapeHtml(r.name)}</td>
+                    <td class="py-3.5 px-4 text-slate-600 font-mono text-xs">${escapeHtml(r.id)}</td>
+                    <td class="py-3.5 px-4 text-slate-600">${escapeHtml(r.grade)}</td>
+                    <td class="py-3.5 px-4 font-semibold text-teal-700">${r.unit1}/31</td>
+                    <td class="py-3.5 px-4 font-semibold text-indigo-700">${r.unit2}/31</td>
+                    <td class="py-3.5 px-4 font-extrabold text-slate-900">${r.total}/${r.max}</td>
+                    <td class="py-3.5 px-4"><span class="px-2.5 py-1 rounded-full text-xs font-bold ${pctColor}">${r.percentage}%</span></td>
+                    <td class="py-3.5 px-4 text-xs text-slate-500">${escapeHtml(r.timestamp)}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        function exportTeacherCSV() {
+            if (!state.teacherRecords.length) {
+                showToast("No student records to export yet.");
+                return;
+            }
+            const headers = ["Student Name", "ID Number", "Grade/Section", "Unit 1 (/31)", "Unit 2 (/31)", "Total (/62)", "Percentage (%)", "Timestamp"];
+            const rows = state.teacherRecords.map(r => [
+                `"${r.name.replace(/"/g, '""')}"`,
+                `"${r.id.replace(/"/g, '""')}"`,
+                `"${r.grade.replace(/"/g, '""')}"`,
+                r.unit1, r.unit2, r.total, r.percentage, `"${r.timestamp}"`
+            ].join(','));
+            const csv = [headers.join(','), ...rows].join('\n');
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Grade2_English_Results_${new Date().toISOString().slice(0,10)}.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            showToast("CSV results file downloaded!");
+        }
+
+        // ==================== UTILITY ====================
+        function escapeHtml(str) {
+            return String(str)
+                .replace(/&/g, "&amp;")
+                .replace(/</g, "&lt;")
+                .replace(/>/g, "&gt;")
+                .replace(/"/g, "&quot;")
+                .replace(/'/g, "&#039;");
+        }
+    </script>
+</body>
+</html>
